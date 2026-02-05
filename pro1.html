@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Portfolio | Vageesh Nadig H R</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --secondary: #22d3ee;
+      --dark: #020617;
+      --light: #f8fafc;
+      --glass: rgba(255,255,255,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #020617, #000);
+      color: var(--light);
+      overflow-x: hidden;
+    }
+
+  
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      background: rgba(2,6,23,0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--light);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -6px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: 0.3s;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .hero h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .hero span {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(99,102,241,0.4);
+      transition: transform 0.3s;
+    }
+
+    .btn:hover { transform: scale(1.05); }
+
+    
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 6rem 2rem;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--glass);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 40px rgba(34,211,238,0.3);
+    }
+
+   
+    .skill-bar {
+      margin-top: 1rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-bar span {
+      display: block;
+      height: 10px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+  
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    input, textarea {
+      padding: 0.9rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      opacity: 0.6;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2.4rem; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>Vageesh Nadig H R</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Hi, I'm <span>Vageesh Nadig H R</span></h2>
+    <p>High-End Web Developer creating modern, responsive & premium web experiences.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I design and develop premium websites that help individuals and businesses earn more. My focus is clean UI, animations, performance, and responsiveness.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">HTML & CSS
+      <div class="skill-bar"><span style="width:95%"></span></div>
+    </div>
+    <div class="card">JavaScript
+      <div class="skill-bar"><span style="width:85%"></span></div>
+    </div>
+    <div class="card">Responsive Design
+      <div class="skill-bar"><span style="width:90%"></span></div>
+    </div>
+    <div class="card">UI / UX
+      <div class="skill-bar"><span style="width:80%"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card"><h3>Premium Portfolio</h3><p>Glassmorphism UI with animations.</p></div>
+    <div class="card"><h3>Business Website</h3><p>Conversion-focused responsive design.</p></div>
+    <div class="card"><h3>Dashboard UI</h3><p>Modern analytics interface.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form onsubmit="sendMsg(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Vageesh Nadig H R — Premium Portfolio</p>
+</footer>
+
+<script>
+  function sendMsg(e) {
+    e.preventDefault();
+    alert('Message sent successfully!');
+  }
+</script>
+
+</body>
+</html>
